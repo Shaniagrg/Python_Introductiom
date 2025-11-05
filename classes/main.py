@@ -32,7 +32,7 @@ print(p1)
 #Homework 1
 class Example:
   cv:str = "I'm class variable"
-  iv:str = ""
+  #iv:str = ""
   def __init__(self):
      self.iv = "I'm instance variable"
   @classmethod     #to call class function we usually use static function cm{...} but in python you call a DECLATOR @classmethod

@@ -10,6 +10,6 @@ class Account:
         return self.__accountNum
     
 a1:Account = Account (1234, "Tom")
-# print (a1.accountNum) THROW ERRROR cuz a1 is directly accessing private variable which is not applicable.
+# print (a1.__accountNum) THROW ERRROR cuz a1 is directly accessing private variable which is not applicable.
 print(a1.name)
 print(a1.getAccountNum()) # a private variable is only accessed through function

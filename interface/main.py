@@ -7,11 +7,11 @@ class Animal(ABC):
         
     @abstractmethod
     def noise(self) -> str:
-        return f'Some noise, {self.legs} legs.'
-
+        pass
+    
     @abstractmethod
     def move(self) -> str:
-        return 'on land'
+        pass
     
     @classmethod
     def test(cls) -> str:
@@ -26,7 +26,7 @@ class Dog (Animal):
         self.breed = b
         
     def noise(self) -> str:
-        return f'{super().noise()} woof'
+        return 'woof'
     
     def move(self) -> str:
         return 'run'

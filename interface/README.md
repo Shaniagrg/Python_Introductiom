@@ -22,4 +22,4 @@ Interface
          }
      }
      
-     Throws error cuz Animal had function noise but Class Dog dont have it. to make it work clsdd Dog should also have function noise()
+     Throws error cuz Animal had function noise but Class Dog dont have it. to make it work class Dog should also have function noise()

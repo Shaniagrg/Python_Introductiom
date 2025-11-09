@@ -1,41 +1,38 @@
 from abc import ABC, abstractmethod
 
 class Animal(ABC):
-    legs:int = 0
-    def __init__(self, l):
-        self.legs = l
+    EYES:int = 2
         
     @abstractmethod
     def noise(self) -> str:
         pass
     
     @abstractmethod
-    def move(self) -> str:
+    def sum(x:int, y:int) -> int:
         pass
-    
-    @classmethod
-    def test(cls) -> str:
-        return 'test'
         
         
 class Dog (Animal):
-    breed:str = ""
+    legs:int = 0
+    voice:str = ""
     
-    def __init__(self, l:int, b:str):
-        super().__init__(l)
-        self.breed = b
-        
+    def __init__(self, l:int, v:str):
+        self.legs =l
+        self.voice = v
+    
+    def walk(self):
+        return 'run'    
+    
     def noise(self) -> str:
         return 'woof'
     
-    def move(self) -> str:
-        return 'run'
+    def sum(self, x:int, y:int) -> int:
+        return x + y + 1
     
-    def walk(self):
-        return f'Dog walks {super().move()}'
     
-d1:Dog = Dog (1, 'BullDog')
-print(d1.move())
+    
+d1:Dog = Dog (1, 'bark')
+print(d1.walk())
 print(d1.noise())
-print(d1.test())
+print(d1.sum(2,4))
 

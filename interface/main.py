@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 
 class Animal(ABC):
     EYES:int = 2
-        
-    @abstractmethod
+       
+    @abstractmethod 
     def noise(self) -> str:
         pass
     
@@ -23,10 +23,10 @@ class Dog (Animal):
     def walk(self):
         return 'run'    
     
-    def noise(self) -> str:
+    def noise(self) -> str:  # Method is overridden here
         return 'woof'
     
-    def sum(self, x:int, y:int) -> int:
+    def sum(self, x:int, y:int) -> int:  # Method is overridden here
         return x + y + 1
     
     

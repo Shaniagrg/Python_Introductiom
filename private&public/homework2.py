@@ -1,6 +1,5 @@
 class Village:
-    land:int = 0
-    __house:str = "" # __ represents private
+   # __house:str = "" # __ represents private
     
     def __init__(self,l:int, h:str):
         self.land = l

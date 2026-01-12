@@ -1,5 +1,4 @@
 class Animal:
-    legs:int = 0 
     def __init__(self,l:int):
         self.legs = l
     

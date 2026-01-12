@@ -1,6 +1,4 @@
 class Account:
-    __accountNum:int = 0
-    name:str = ""
     
     def __init__(self, acn:int, n:str):
         self.__accountNum = acn

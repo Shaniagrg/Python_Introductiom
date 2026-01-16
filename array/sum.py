@@ -3,11 +3,19 @@ Get the sum of the array
 eg: [1,3,4,8,3]
 ans: 19
 '''
+def sum (a:list[int]) -> int:
+    x:int = 0
+    for i in range(len(a)):
+        x = x + a[i]
+    return x
+            
+def addTest(expected:int, actual:int):
+    if expected == actual:
+        return "correct"
 
-a:list[int] = [1,3,4,8,3]
-x:int = 0
-for i in range(len(a)):
-    x = x + a[i]
+    else:
+        return "incorrect, addition is wrong"
 
-print(x)
+print(addTest(19, sum([1,3,4,8,3])))
+print(addTest(6, sum([3,3])))
 

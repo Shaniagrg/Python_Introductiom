@@ -4,10 +4,17 @@ eg: [1,2,3,4,5]
 ans: 120
 '''
 
-a:list[int] = [1,2,3,4,5]
-x:int = 1
+def product (a:list[int]) -> int:
+    total:int = 1
+    for product in range(len(a)):
+        total = total * a[product]
+    return total
+ 
+def productTest(expected:int, actual:int):
+    if expected == actual:
+        return "correct"
 
-for i in range(len(a)):
-    x = x * a[i]
-    
-print(x)
+    else:
+        return "incorrect, addition is wrong"
+
+print(productTest(120, product([1,2,3,4,5])))

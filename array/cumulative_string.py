@@ -11,12 +11,13 @@ def get_cumulative_str (a:str) -> list[str]:
         add.append(value)
     return add
 
-def addTest(expected:list[str], actual:list[str]):
-    if expected == actual:
-        return "correct"
+def addTest(expected:list[str], actual:list[str]) -> str:
+    for i in range(len(expected)):
+        if expected[i] == actual[i]:
+            return "correct"
 
-    else:
-        return "incorrect, addition is wrong"
+        else:
+            return "incorrect, addition is wrong"
 
 print(addTest(['a','ab','abc','abcd'], get_cumulative_str("abcd") ))
 print(addTest(['e','ef','efg','efgh'], get_cumulative_str("efgh") ))

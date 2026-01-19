@@ -4,7 +4,7 @@ eg: [[4,1],[5,2],[6,3]]
 ans: 5,7 & 9
 '''
 
-def sum_row (a:list[int]):
+def sum_row (a:list[int]) -> list[int]:
     sum:list[int] = []
     for row in range(len(a)):
         total:int = 0
@@ -13,12 +13,13 @@ def sum_row (a:list[int]):
         sum.append(total)
     return sum
 
-def addTest(expected:list[int], actual:list[int]):
-    if expected == actual:
-        return "correct"
+def addTest(expected:list[int], actual:list[int]) -> str:
+    for i in range(len(expected)):
+        if expected[i] == actual[i]:
+            return "correct"
 
-    else:
-        return "incorrect, addition is wrong"
+        else:
+            return "incorrect, addition is wrong"
         
 print (addTest([5,7,9] , sum_row([[4,1],[5,2],[6,3]])))
 print (addTest([6,4,3] , sum_row([[3,3],[2,2],[2,1]])))

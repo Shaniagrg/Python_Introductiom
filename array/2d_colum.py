@@ -18,12 +18,13 @@ def sum_column(a:list[int]) -> list[int]:
         
     return sum
 
-def addTest(expected:list[int], actual:list[int]):
-    if expected == actual:
-        return "correct"
+def addTest(expected:list[int], actual:list[int]) -> str:
+    for i in range(len(expected)):
+        if expected[i] == actual[i]:
+            return "correct"
 
-    else:
-        return "incorrect, addition is wrong"
+        else:
+            return "incorrect, addition is wrong"
 
 print(addTest([15,6], sum_column([[4,1],[5,2],[6,3]])))
 print(addTest([8,10], sum_column([[4,1],[2,5],[2,4]])))

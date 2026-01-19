@@ -11,12 +11,13 @@ def get_value (a:str) -> list[str]:
         
     return alphabet
 
-def addTest(expected:list[str], actual:list[str]):
-    if expected == actual:
-        return "correct"
+def addTest(expected:list[str], actual:list[str]) -> str:
+    for i in range(len(expected)):
+        if expected[i] == actual[i]:
+            return "correct"
 
-    else:
-        return "incorrect, addition is wrong"
+        else:
+            return "incorrect, addition is wrong"
     
 print(addTest(['a','b','c','d'], get_value('abcd')))
 print(addTest(['e','f','g','h'], get_value('efgh')))

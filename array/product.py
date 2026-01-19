@@ -10,7 +10,7 @@ def product (a:list[int]) -> int:
         total = total * a[product]
     return total
  
-def productTest(expected:int, actual:int):
+def productTest(expected:int, actual:int) -> str:
     if expected == actual:
         return "correct"
 

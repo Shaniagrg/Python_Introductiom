@@ -10,7 +10,7 @@ def highest_value (a:list[int]) -> int:
         if x < a[i]:
             x = a[i]
     return x
-def highest_valueTest(expected:int, actual:int):
+def highest_valueTest(expected:int, actual:int) -> str:
     if expected == actual:
         return "correct"
 

@@ -9,7 +9,7 @@ def sum (a:list[int]) -> int:
         x = x + a[i]
     return x
             
-def addTest(expected:int, actual:int):
+def addTest(expected:int, actual:int) -> str:
     if expected == actual:
         return "correct"
 

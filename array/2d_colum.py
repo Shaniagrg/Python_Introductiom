@@ -11,14 +11,15 @@ def sum_column(a:list[int]) -> list[int]:
     for column in range(total_column):
         total:int = 0
         
-        for index in range(len(a)):
-            total = total + a[index][column]
+        for row in range(len(a)):
+            total = total + a[row][column]
             
         sum.append(total)
         
     return sum
 
 def addTest(expected:list[int], actual:list[int]) -> str:
+    print(actual)
     for i in range(len(expected)):
         if expected[i] == actual[i]:
             return "correct"

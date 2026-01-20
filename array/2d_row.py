@@ -8,12 +8,13 @@ def sum_row (a:list[int]) -> list[int]:
     sum:list[int] = []
     for row in range(len(a)):
         total:int = 0
-        for index in range(len(a[row])):
-            total = total + a[row][index]
+        for column in range(len(a[row])):
+            total = total + a[row][column]
         sum.append(total)
     return sum
 
 def addTest(expected:list[int], actual:list[int]) -> str:
+    print(actual)
     for i in range(len(expected)):
         if expected[i] == actual[i]:
             return "correct"

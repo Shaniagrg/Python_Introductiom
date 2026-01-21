@@ -18,4 +18,5 @@ def addTest(expected:int, actual:int) -> str:
 
 print(addTest(19, sum([1,3,4,8,3])))
 print(addTest(6, sum([3,3])))
+print(addTest(-11, sum([-1,-2,-3,-5])))
 

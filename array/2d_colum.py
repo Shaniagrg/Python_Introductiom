@@ -2,6 +2,8 @@
 Get sum of the column
 eg: [[4,1],[5,2],[6,3]]
 ans: 15 & 6
+
+edge case []
 '''
 
 def sum_column(a:list[int]) -> list[int]:

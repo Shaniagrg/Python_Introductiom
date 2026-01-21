@@ -16,12 +16,12 @@ def sum_row (a:list[int]) -> list[int]:
 def addTest(expected:list[int], actual:list[int]) -> str:
     print(actual)
     for i in range(len(expected)):
-        if expected[i] == actual[i]:
-            return "correct"
-
-        else:
+        if expected[i] != actual[i]:
             return "incorrect, addition is wrong"
+    return "correct"
         
 print (addTest([5,7,9] , sum_row([[4,1],[5,2],[6,3]])))
 print (addTest([6,4,3] , sum_row([[3,3],[2,2],[2,1]])))
+print (addTest([0] , sum_row([[1,-1]])))
+print (addTest([] , sum_row([[]])))
     

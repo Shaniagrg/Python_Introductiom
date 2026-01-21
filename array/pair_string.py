@@ -17,11 +17,10 @@ def get_value (a:str) -> list[str]:
 def addTest(expected:list[str], actual:list[str]) -> str:
     print(actual)
     for i in range(len(expected)):
-        if expected[i] == actual[i]:
-            return "correct"
-
-        else:
+        if expected[i] != actual[i]:
             return "incorrect, addition is wrong"
+    return "correct"
     
 print(addTest(['ab','ad','bb','bd','cb','cd'], get_value('abcd')))
 print(addTest(['ef','eh','ff','fh','gf','gh','hf','hh'], get_value('efgh')))
+print(addTest([], get_value('')))

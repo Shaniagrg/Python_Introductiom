@@ -18,3 +18,5 @@ def productTest(expected:int, actual:int) -> str:
         return "incorrect, addition is wrong"
 
 print(productTest(120, product([1,2,3,4,5])))
+print(productTest(1, product([1,1,1,1])))
+print(productTest(0, product([1,2,3,4,5,0])))

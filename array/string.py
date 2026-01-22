@@ -5,17 +5,22 @@ ans -> a b c d
 
 def get_value (a:str) -> list[str]:
     alphabet:list[str] = []
-    
-    for i in range(len(a)): #0>0
-        alphabet.append(a[i])  
-    print(len(alphabet))
-    return alphabet
+    if len(a) == 0:
+        alphabet.append(a)
+        print(alphabet)
+        return alphabet
+    else:
+        for i in range(len(a)): #0>0
+            alphabet.append(a[i])  
+        print(alphabet)
+        return alphabet
 
 def addTest(expected:list[str], actual:list[str]) -> str:
-    for i in range(len(actual)):
-        if expected[i] != actual[i]:  
+    for i in range(len(expected)):
+        if expected[i] == actual[i]:  
+            return "correct"
+        else:
             return "incorrect, addition is wrong"
-    return "correct"
 
     
 print(addTest(['a','b','c','d'], get_value('abcd')))

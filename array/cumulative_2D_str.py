@@ -8,7 +8,7 @@ ans: [['c','co', 'cow'], ['o', 'ow'], ['w']]
 def get_cumulative_str (a:str) -> list[str]:
     store_add:list[list[str]] = []
     if len(a) == 0:
-        store_add.append([''])
+        store_add.append([a])
         return store_add
     else:
         for i in range(len(a)):

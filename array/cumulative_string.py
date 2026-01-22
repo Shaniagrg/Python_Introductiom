@@ -14,12 +14,17 @@ If i = 3: range(3, 4) produces 3 (which corresponds to "d").
 
 def get_cumulative_str (a:str) -> list[str]:
     add:list[str] = []
-    for i in range(len(a)):
-        value = ""
-        for j in range(i, len(a)): 
-            value = value + a[j]  
-            add.append(value)  
-    return add
+    if len(a) == 0:
+        add.append(a)
+        return add
+    
+    else:
+        for i in range(len(a)):
+            value = ""
+            for j in range(i, len(a)): 
+                value = value + a[j]  
+                add.append(value)  
+        return add
 
 def addTest(expected:list[str], actual:list[str]) -> str:
     print(actual)
@@ -32,3 +37,4 @@ def addTest(expected:list[str], actual:list[str]) -> str:
 
 print(addTest(['a','ab','abc','abcd','b','bc','bcd','c','cd','d'], get_cumulative_str("abcd") ))
 print(addTest(['e','ef','efg','efgh','f','fg','fgh','g','gh','h'], get_cumulative_str("efgh") ))
+print(addTest([''], get_cumulative_str('') ))

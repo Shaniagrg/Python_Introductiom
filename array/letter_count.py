@@ -18,12 +18,10 @@ def highest_letter (a:str) -> list[str]:
     
     else:
         for i in range(len(a)):
-            letter = a[i]
-            count = 0
-            for each_letter_index in range(len(a)):
-                if letter == a[each_letter_index]:
-                    count = count + 1
-            store_letter[letter] = count
+            if a[i] in store_letter:
+                store_letter[a[i]] = store_letter[a[i]] + 1
+            else:
+                store_letter[a[i]] = 1
        
     print(store_letter)
     return store_letter

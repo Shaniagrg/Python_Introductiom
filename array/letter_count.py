@@ -20,14 +20,15 @@ def highest_letter (a:str) -> list[str]:
         for i in range(len(a)):
             letter = a[i]
             count = 0
-            
             for each_letter_index in range(len(a)):
                 if letter == a[each_letter_index]:
                     count = count + 1
             store_letter[letter] = count
-
+       
     print(store_letter)
     return store_letter
+
+
     
 def highest_letterTest(expected:dict[str,int], actual:dict[str,int]) -> str:
     if expected == actual:

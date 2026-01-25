@@ -7,12 +7,10 @@ ans = h:1 e:1 l:2 o:1
 '''
 
 def highest_letter (a:str) -> list[str]:
-    letter:str =  ""
-    count:int = 0
     store_letter:dict[str,int] = {}
     
     if len(a) == 0:
-        store_letter[a] = count
+        store_letter[a] = 0
         print(store_letter)
         return store_letter
     

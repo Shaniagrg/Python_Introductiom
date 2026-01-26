@@ -1,0 +1,1 @@
+s:str = "test"

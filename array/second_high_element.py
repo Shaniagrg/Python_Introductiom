@@ -29,7 +29,7 @@ def highest_valueTest(expected:int, actual:int) -> str:
         return "correct"
 
     else:
-        return "incorrect, addition is wrong"
+        return "incorrect, the value isn't the second largest"
 
 print(highest_valueTest(7, second_highest_value([8, 8, 7, 6, 5])))
 print(highest_valueTest(4, second_highest_value([1,3,4,8])))

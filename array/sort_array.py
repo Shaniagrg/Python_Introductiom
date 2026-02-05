@@ -20,13 +20,13 @@ def sort (array:list[int]) -> str:
         
     return 'true'
             
-def highest_valueTest(expected:str, actual:str) -> str:
+def sort_Test(expected:str, actual:str) -> str:
     if expected == actual:
         return "correct"
 
     else:
         return "incorrect, the element aren't sorted"
 
-print(highest_valueTest('false', sort([1,3,6,2])))
-print(highest_valueTest('true', sort([1,1,1,3,4])))
-print(highest_valueTest('true', sort([-6,-5,-2])))
+print(sort_Test('false', sort([1,3,6,2])))
+print(sort_Test('true', sort([1,1,1,3,4])))
+print(sort_Test('true', sort([-6,-5,-2])))

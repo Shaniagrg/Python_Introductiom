@@ -17,9 +17,9 @@ def sort (array:list[int]) -> str:
         
         if array[i] < array[i - 1]:  # If any element is smaller than the previous one, return false
             return 'false'
+        
     return 'true'
             
-
 def highest_valueTest(expected:str, actual:str) -> str:
     if expected == actual:
         return "correct"

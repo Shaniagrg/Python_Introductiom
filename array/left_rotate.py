@@ -14,7 +14,8 @@ a:list[int] = [1, 2, 3, 4, 5]
 left_rotate:list[int] = []
 
 for i in range(len(a)):
-    if i == 4:
+    length:int = len(a) - 1
+    if i == length:
         left_rotate.append(a[0])
     else:   
         left_rotate.append(a[i+1])

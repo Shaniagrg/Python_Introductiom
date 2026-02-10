@@ -10,6 +10,8 @@ Output: 1
 Explanation:    
 The first occurence of 3 in nums is at index 1
 '''
+'''
+My solution
 
 def linear_search (a:list[int], target:int) -> int:
     x:int = 0
@@ -32,9 +34,29 @@ def linear_searchTest(expected:int, actual:int) -> str:
         return "correct"
 
     else:
-        return "incorrect, addition is wrong"
+        return "incorrect, the index is wrong"
 
 print(linear_searchTest(1, linear_search([1,3,6,2], 3)))
+print(linear_searchTest(2, linear_search([1,3,4], 4)))
+print(linear_searchTest(0, linear_search([-1,-5,-2], -1)))
 
+'''
+def linear_search (a:list[int], target:int) -> int:
+    for i in range(len(a)):
+        #If the current element matches the number, return its index
+        if(a[i] == target):
+            return i
+
+        #If the number is not found, return -1
+    return -1
+
+def linear_searchTest(expected:int, actual:int) -> str:
+    if expected == actual:
+        return "correct"
+
+    else:
+        return "incorrect, the index is wrong"
+
+print(linear_searchTest(1, linear_search([1,3,6,2], 3)))
 print(linear_searchTest(2, linear_search([1,3,4], 4)))
 print(linear_searchTest(0, linear_search([-1,-5,-2], -1)))

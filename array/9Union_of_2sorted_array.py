@@ -16,24 +16,17 @@ The elements 1, 2 are common to both, 3, 4, 5 are from nums1 and 7 is from nums2
 '''
 
 def sort_array (nums1:list[int], nums2:list[int]) -> int:
-    length:int = 0
+    
     x:list[int] = set()
     
-    if len(nums1) > len(nums2):
-        length = len(nums1)
-    else:
-        length = len(nums2)
-        
-    for i in range(length):
-        if nums1[i] in x and nums2[i] in x:
-            continue
-        elif nums1[i] == nums2[i]:
+    for i in range(len(nums1)):
             x.add(nums1[i])
-        else:
-            x.add(nums1[i])
+    
+    for i in range(len(nums2)):
             x.add(nums2[i])
-            
-
+    print(x)
+    return sorted(list(x)) #sorted cuz set stores randomly
+ 
 
 def sort_arrayTest(expected:list[int], actual:list[int]) -> str:
     if expected == actual:
@@ -45,4 +38,7 @@ def sort_arrayTest(expected:list[int], actual:list[int]) -> str:
 print(sort_arrayTest([1,2,3,4,5,7], sort_array(nums1=[1, 2, 3, 4, 5], nums2=[1, 2, 7])))
 
 print(sort_arrayTest([1,3,4,5,6,7], sort_array(nums1=[1,3,4], nums2=[5,6,7])))
-print(sort_arrayTest([-1,-5,-2], sort_array(nums1=[-1], nums2=[-1,-5,-2])))
+print(sort_arrayTest([-5,-2,-1], sort_array(nums1=[-1], nums2=[-1,-5,-2])))
+
+
+#union: combine 2 array but u don't repeat any element

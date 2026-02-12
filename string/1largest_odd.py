@@ -39,3 +39,39 @@ class Solution:
 sol = Solution()
 print(sol.largestOddNumber("52"))
 '''
+
+class Solution:
+    # Function to find the largest odd number that is a substring of given string 
+    def largeOddNum(self, s: str) -> str:
+        ind = -1
+        
+        # Iterate through the string from the end to beginning
+        i = 0
+        for i in range(len(s) - 1, -1, -1):
+            # Break if an odd digit is found
+            if (int(s[i]) % 2) == 1:
+                ind = i
+                break
+        
+        # Skipping any leading zeroes
+        i = 0
+        while i <= ind and s[i] == '0':
+            i += 1
+        
+        # Return the largest odd number substring
+        return s[i:ind + 1]
+    
+    def largeOddNum_Test(self, expected:str, actual:str):
+        if expected == actual:
+            return "correct"
+
+        else:
+            return "incorrect, it is not the largest odd"
+        
+
+# Driver code
+solution1 = Solution()
+num1:str = "504"
+print(solution1.largeOddNum(s=num1))
+print(solution1.largeOddNum_Test("5", solution1.largeOddNum(s=num1)))
+
